@@ -2142,3 +2142,10 @@ footer .copy-right {
     padding: 0;
     margin: 0;
 }
+
+
+/* toc 背景色 */
+.toc-widget.card{
+    background: transparent !important;
+    box-shadow: none !important;
+}
