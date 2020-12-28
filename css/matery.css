@@ -241,7 +241,9 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    /* background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); */
+    background-image: linear-gradient(to right, #bf30ac 0%, #0f9d58 100%);
+    opacity: 0.7;
 }
 
 .text-color {
@@ -293,6 +295,7 @@ header .brand-logo .logo-img {
     height: 45px;
     vertical-align: middle;
     padding-bottom: 6px;
+    border-radius: 50%;
 }
 
 header .brand-logo .logo-span {
@@ -565,6 +568,7 @@ header .go-back i {
     left: 0;
     top: 0;
     content: "";
+    background-color: transparent !important;
 }
 
 .bg-cover .container {
