@@ -4,7 +4,7 @@
 
 # Site
 title: 小星落
-subtitle: '一只莫得感情的大老虎'
+subtitle: '一只莫得感情的小菜鸡'
 description: ''
 keywords:
 author: Born to the sun
@@ -41,21 +41,39 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
-highlight:
-  enable: false
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
+# highlight:
+#   enable: true
+#   line_number: false
+#   auto_detect: false
+  # tab_replace: ''
+
 prismjs:
   enable: true
   preprocess: true
   line_number: true
+  line_highlight: true
+  show_language: true
+  highlight_keywords: true
+  inline_color: true
+  filter_highlightAll: true
   tab_replace: ''
+# prism_plugin:
+#   enable: true
+#   preprocess: true
+#   # mode: 'preprocess'    # realtime/preprocess
+#   theme: okaidia
+#   line_number: true    # default false
+#   line_highlight: true
+#   show_language: true
+#   highlight_keywords: true
+#   toolbar: true
+#   inline_color: true
+#   filter_highlightAll: true
+  # custom_css: 
+
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -142,6 +160,7 @@ live2d:
     position: right
     width: 150
     height: 300
+    hOffset: 65
   mobile:
     show: true
   react:
