@@ -568,7 +568,7 @@ header .go-back i {
     left: 0;
     top: 0;
     content: "";
-    background-color: transparent !important;
+    background: transparent !important;
 }
 
 .bg-cover .container {
