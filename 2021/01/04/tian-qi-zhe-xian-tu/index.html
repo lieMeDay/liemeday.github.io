@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="时间格式转换, 小星落">
+    <meta name="keywords" content="天气折线图, 小星落">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>时间格式转换 | 小星落</title>
+    <title>天气折线图 | 小星落</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">时间格式转换</h1>
+                    <h1 class="description center-align post-title">天气折线图</h1>
                 </div>
             </div>
         </div>
@@ -437,6 +437,10 @@
                                 <span class="chip bg-color">JavaScript</span>
                             </a>
                         
+                            <a href="/tags/css/">
+                                <span class="chip bg-color">css</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -458,7 +462,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-16
+                    2021-01-04
                 </div>
                 
 
@@ -467,7 +471,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    519
+                    528
                 </div>
                 
 
@@ -497,92 +501,202 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="将秒转换成时分秒"><a href="#将秒转换成时分秒" class="headerlink" title="将秒转换成时分秒"></a>将秒转换成时分秒</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//将秒转换成时分秒</span>
-<span class="token keyword">const</span> <span class="token function-variable function">formatSeconds</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">var</span> hh <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>a <span class="token operator">/</span> <span class="token number">3600</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>hh <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> hh <span class="token operator">=</span> <span class="token string">"0"</span> <span class="token operator">+</span> hh<span class="token punctuation">;</span>
-  <span class="token keyword">var</span> mm <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a <span class="token operator">-</span> hh <span class="token operator">*</span> <span class="token number">3600</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>mm <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> mm <span class="token operator">=</span> <span class="token string">"0"</span> <span class="token operator">+</span> mm<span class="token punctuation">;</span>
-  <span class="token keyword">var</span> ss <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a <span class="token operator">-</span> hh <span class="token operator">*</span> <span class="token number">3600</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>ss <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> ss <span class="token operator">=</span> <span class="token string">"0"</span> <span class="token operator">+</span> ss<span class="token punctuation">;</span>
-  <span class="token keyword">var</span> length <span class="token operator">=</span> hh <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span> mm <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span> ss<span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> length<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token string">"NaN"</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="计算两个日期时间差-当前日期"><a href="#计算两个日期时间差-当前日期" class="headerlink" title="计算两个日期时间差 当前日期"></a>计算两个日期时间差 当前日期</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 计算两个日期时间差 当前日期</span>
-<span class="token keyword">const</span> <span class="token function-variable function">twoDateCom</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">var</span> d1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">-</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//将-转化为/，使用new Date</span>
-  <span class="token keyword">var</span> d2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token keyword">let</span> cha <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token punctuation">(</span>d2 <span class="token operator">-</span> d1<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span><span class="token punctuation">)</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> d3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">-</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//将-转化为/，使用new Date</span>
-    cha <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token punctuation">(</span>d3 <span class="token operator">-</span> d1<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">return</span> cha
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="将时分秒的格式转换成秒的函数"><a href="#将时分秒的格式转换成秒的函数" class="headerlink" title="将时分秒的格式转换成秒的函数"></a>将时分秒的格式转换成秒的函数</h3><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">//将时分秒的格式转换成秒的函数
-const hms = (time) =&gt; {
-  var s = "";
-  if (time != "" || time != null) {
-    // console.log(time);
-    var hour = time.split(":")[0];
-    var min = time.split(":")[1];
-    var sec = time.split(":")[2];
-    s = Number(hour * 3600) + Number(min * 60) + Number(sec);
-    return s;
-  } else {
-    return "";
-  }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="时间戳取时分秒"><a href="#时间戳取时分秒" class="headerlink" title="时间戳取时分秒"></a>时间戳取时分秒</h3><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">// 时间戳取时分秒
-const getCsfm = (data) =&gt; {
-  var myDate = new Date(Number(data));
-				// var year = myDate.getFullYear(); //获取当前年
-				// var mon = myDate.getMonth() + 1; //获取当前月
-				// var date = myDate.getDate(); //获取当前日
-        var hours = myDate.getHours(); //获取当前小时
-        hours=hours&lt;10?'0'+hours:hours
-				var minutes = myDate.getMinutes(); //获取当前分钟
-        minutes=minutes&lt;10?'0'+minutes:minutes
-				var seconds = myDate.getSeconds(); //获取当前秒
-        seconds=seconds&lt;10?'0'+seconds:seconds
-				var now = hours + ":" + minutes + ":" + seconds;
-				return now;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="获取两个日期之间相隔的所有日期"><a href="#获取两个日期之间相隔的所有日期" class="headerlink" title="获取两个日期之间相隔的所有日期"></a>获取两个日期之间相隔的所有日期</h3><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">// 获取两个日期之间相隔的所有日期
-function getDayAll(starDay, endDay) {
+                <h3 id="移动端天气折线图数据展示"><a href="#移动端天气折线图数据展示" class="headerlink" title="移动端天气折线图数据展示"></a>移动端天气折线图数据展示</h3><p><img src="https://liemeday.github.io/blogPic/20210104115612/1.png" alt="1"></p>
+<p>可使用 <font color="blue">echarts</font> 来画折线图，小程序或h5都可<br>(以下展示小程序使用方法)</p>
+<h4 id="小程序需先引入echarts"><a href="#小程序需先引入echarts" class="headerlink" title="小程序需先引入echarts"></a>小程序需先引入<font color="blue">echarts</font></h4><p>下载echarts小程序组件包<br><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/tutorial.html#%E5%9C%A8%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E4%BD%BF%E7%94%A8%20ECharts">微信小程序中使用echarts</a></p>
+<pre class="line-numbers language-JSON" data-language="JSON"><code class="language-JSON">"usingComponents": {
+    "ec-canvas":"/components/ec-canvas/ec-canvas"
+  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">import * as echarts from '../ec-canvas/echarts';
+var chart = ''
 
-  var arr = [];
-  var dates = [];
-  // 设置两个日期UTC时间
-  var db = new Date(starDay.replace(/-/g, "/"));
-  var de = new Date(endDay.replace(/-/g, "/"));
+function initChart(canvas, width, height, dpr) {
+  chart = echarts.init(canvas, null, {
+    width: width,
+    height: height,
+    devicePixelRatio: dpr //解决小程序视图模糊的问题，必写
+  });
+  canvas.setChart(chart);
 
-  // 获取两个日期GTM时间
-  var s = db.getTime() - 24 * 60 * 60 * 1000;
-  var d = de.getTime() - 24 * 60 * 60 * 1000;
+  var option = {
+    color: ["#FB7821", "#1B9DFF"],
+    grid: {
+      containLabel: true,
+      x: -11,
+      x2: 15,
+      top: 14,
+      bottom: 15
+    },
+    tooltip: {
+      show: true,
+      trigger: 'axis'
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      show: false,
+      axisLabel: {
+        interval: 49
+      }
+    },
+    yAxis: {
+      min: 'dataMin',
+      show: false
+    },
+    series: [{
+      itemStyle: {
+        normal: {
+          label: {
+            show: true,
+            position: [-5, -11],
+            textStyle: {
+              color: 'black'
+            },
+            formatter: function (params) {
+              return params.value + '°'
+            }
+          }
+        }
+      },
+      type: 'line',
+      symbolSize: '4',
+      smooth: true,
+      data: []
+    }, {
+      itemStyle: {
+        normal: {
+          label: {
+            show: true,
+            position: [-5, 7],
+            textStyle: {
+              color: 'black'
+            },
+            formatter: function (params) {
+              return params.value + '°'
+            }
+          }
+        }
+      },
+      type: 'line',
+      symbolSize: '4',
+      smooth: true,
+      data: []
+    }]
+  };
 
-  // 获取到两个日期之间的每一天的毫秒数
-  for (var i = s; i &lt;= d;) {
-    i = i + 24 * 60 * 60 * 1000;
-    arr.push(parseInt(i))
-  }
+  chart.setOption(option);
+  return chart;
+}
 
-  // 获取每一天的时间  YY-MM-DD
-  for (var j in arr) {
-    var time = new Date(arr[j]);
-    var year = time.getFullYear(time);
-    var mouth = (time.getMonth() + 1) &gt;= 10 ? (time.getMonth() + 1) : ('0' + (time.getMonth() + 1));
-    var day = time.getDate() &gt;= 10 ? time.getDate() : ('0' + time.getDate());
-    var YYMMDD = year + '-' + mouth + '-' + day;
-    dates.push(YYMMDD)
-  }
+//在data中调用
+data: {
+    ec: {
+      onInit: initChart
+    },
+  },<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>获取到数据后 赋值给对应值即可<br>重点在与<font color="blue">html</font>与<font color="blue">css</font>的设置</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dlB<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scroll-view</span> <span class="token attr-name">scroll-x</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>body-module<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>body-weather-line<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ec-canvas</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mychart-day-line<span class="token punctuation">"</span></span> <span class="token attr-name">canvas-id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myCanvasD<span class="token punctuation">"</span></span> <span class="token attr-name">ec</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ ec }}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ec-canvas</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>block</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{weatherData}}<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">wx:</span>key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>index<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>body-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>day-font<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ item.dayWeek }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>day-time<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ item.dayLabel }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>weather-image<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>image</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{item.weatherIcon}}<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img<span class="token punctuation">"</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>image</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>weather-font<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ item.weatherLabel }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>weather-line<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>block</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scroll-view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.dlB</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 400rpx<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 20rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-  return dates
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token selector">.body-module</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 410rpx<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.body-weather-line</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 608px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 26px<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 200rpx<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.body-item</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 64px<span class="token punctuation">;</span>
+  <span class="token property">border-right</span><span class="token punctuation">:</span> 1px solid #f3f3f3<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* .body-bg {
+  background-image: linear-gradient(to top, #fff 0%, #def5e7 50%, #fff 100%);
+} */</span>
+
+<span class="token selector">.day-font</span> <span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #3a3a3b<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 28rpx<span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* .day-bgco {
+  background-color: #FFA800;
+  color: #fff;
+  width: 100rpx;
+  border-radius: 5rpx;
+  margin: 0 auto;
+} */</span>
+
+<span class="token selector">.day-time</span> <span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #999999<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 24rpx<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.weather-image</span> <span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> -webkit-box<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> -webkit-flex<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.weather-image .img</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.weather-font</span> <span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 50rpx<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #3a3a3b<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 28rpx<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.weather-line</span> <span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>同理可设置下方<br><img src="https://liemeday.github.io/blogPic/20210104115612/2.png" alt="2"></p>
+
                 
             </div>
             <hr/>
@@ -638,6 +752,10 @@ function getDayAll(starDay, endDay) {
                             
                                 <a href="/tags/JavaScript/">
                                     <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
+                                <a href="/tags/css/">
+                                    <span class="chip bg-color">css</span>
                                 </a>
                             
                         </div>
@@ -808,7 +926,7 @@ function getDayAll(starDay, endDay) {
         repo: 'liemeday.github.io',
         owner: 'lieMeDay',
         admin: "lieMeDay",
-        id: '2020-12-16T15-01-10',
+        id: '2021-01-04T11-56-12',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -834,77 +952,29 @@ function getDayAll(starDay, endDay) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/18/datepd/">
+                <a href="/2021/01/04/tian-qi-zhe-xian-tu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="时间判断">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="天气折线图">
                         
-                        <span class="card-title">时间判断</span>
+                        <span class="card-title">天气折线图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            判断当前时间是否在某一时间段内
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JavaScript/" class="post-category">
-                                    JavaScript
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/11/28/arrsort/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="js数组对象排序">
-                        
-                        <span class="card-title">js数组对象排序</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            sort排序
+                            移动端天气折线图数据展示
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-04
                             </span>
                         <span class="publish-author">
                             
@@ -918,11 +988,65 @@ function getDayAll(starDay, endDay) {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/JavaScript/">
                         <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/css/">
+                        <span class="chip bg-color">css</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/29/xiao-cheng-xu-radio/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="小程序radio组件样式">
+                        
+                        <span class="card-title">小程序radio组件样式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            微信小程序修改radio组件自定义选中、未选中样式
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/css/" class="post-category">
+                                    css
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">小程序</span>
                     </a>
                     
                 </div>
