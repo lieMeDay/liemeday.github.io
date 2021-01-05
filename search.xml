@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>nodeJs爬取图片</title>
+      <link href="2021/01/05/nodegetpic/"/>
+      <url>2021/01/05/nodegetpic/</url>
+      
+        <content type="html"><![CDATA[<p>简单的nodeJs爬取图片 小样例</p><h3 id="1、新建node项目"><a href="#1、新建node项目" class="headerlink" title="1、新建node项目"></a>1、新建node项目</h3><p>npm init -y<br>-y 的含义：yes的意思，在init的时候省去了敲回车的步骤，生成的默认的package.json</p><!-- version 版本号，一般从0.1.0开始description描述keywords 关键词用逗号隔开author名字加邮箱license UNLICENSE，一般不授权公用 --><h3 id="2、安装模块"><a href="#2、安装模块" class="headerlink" title="2、安装模块"></a>2、安装模块</h3><p>爬取图片所需要的模块</p><ul><li>request request模块让http请求变的更加简单。(作为客户端，去请求、抓取另一个网站的信息)</li><li>cheerio cheerio 是一个 jQuery Core 的子集，其实现了 jQuery Core 中浏览器无关的 DOM 操作 API<br>request cheerio 需要npm 下载</li><li>fs 自带 操作文件读写</li></ul><h3 id="3、编写抓取图片代码"><a href="#3、编写抓取图片代码" class="headerlink" title="3、编写抓取图片代码"></a>3、编写抓取图片代码</h3><h4 id="1、新建-app-js"><a href="#1、新建-app-js" class="headerlink" title="1、新建 app.js"></a>1、新建 app.js</h4><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">//引入模块const cheerio = require('cheerio');const fs = require('fs');const request = require('request');// 获取页面信息function start(url) {    request(url, function (err, res, body) {        if (!err &amp;&amp; res.statusCode == 200) {            findImg(body, saveImgFile);        }    })}// url 为页面的urlstart('url')// 页面节点解析function findImg(dom,callback) { let $ = cheerio.load(dom);//  页面节点 找到img 标签 each 循环 $('img').each((index,dom)=&gt;{ let imgSrc = $(dom).attr('src'); // 获取图片路径 callback(imgSrc,index); })}function saveImgFile(src, index) {    console.log(src,index)    let ext = src.split('.').pop() //图片类型 png jpg  pop() 方法用于删除并返回数组的最后一个元素。    let imgName = index + '.' + ext    // if (src.indexOf('http') &lt; 0) src = 'http:' + src    // src 路径需确保为完整路径    // 新建pic 文件夹 保存到文件夹下    request(src).pipe(fs.createWriteStream('./pic/' + imgName)) // 下载文件到本地}// 调用start  url 为页面的urlstart('http://www.netbian.com/index.htm')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2、运行"><a href="#2、运行" class="headerlink" title="2、运行"></a>2、运行</h4><p>node app.js</p><p>注：<font color="#999" size="1px">最最简单的图片抓取方法，大部分页面都支持</font></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> nodeJs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> nodeJs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>心形对象</title>
       <link href="2021/01/05/qi-xi-xin-xing/"/>
       <url>2021/01/05/qi-xi-xin-xing/</url>
