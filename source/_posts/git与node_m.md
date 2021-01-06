@@ -3,7 +3,7 @@ title: git 上传node_modules
 author: Born to the sun
 top: false
 cover: false
-toc: true
+toc: false
 mathjax: true
 date: 2020-06-29 18:50:40
 keywords:

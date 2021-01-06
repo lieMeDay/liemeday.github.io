@@ -3,7 +3,7 @@ title: 数组方法
 author: Born to the sun
 top: false
 cover: false
-toc: true
+toc: false
 mathjax: true
 date: 2020-06-30 18:50:40
 keywords:

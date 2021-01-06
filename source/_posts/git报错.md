@@ -3,7 +3,7 @@ title: 提示Your branch is up-to-date with 'origin/master' 该怎么办
 author: Born to the sun
 top: false
 cover: false
-toc: true
+toc: false
 mathjax: true
 date: 2020-06-28 18:50:40
 keywords:

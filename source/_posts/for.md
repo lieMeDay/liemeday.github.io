@@ -80,7 +80,7 @@ map() 方法返回一个新数组，数组中的元素为原始数组元素调�
 ```javascript
 let arr = [1,2,3];
 let tt = arr.map(function(i){
- console.log(i)
+//  console.log(i)
  return i*2;
 })
 // [2,4,6]
