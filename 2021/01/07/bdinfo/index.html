@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="地图坐标文件, 小星落">
+    <meta name="keywords" content="百度地图给多个点添加信息窗口 点击事件, 小星落">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>地图坐标文件 | 小星落</title>
+    <title>百度地图给多个点添加信息窗口 点击事件 | 小星落</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">地图坐标文件</h1>
+                    <h1 class="description center-align post-title">百度地图给多个点添加信息窗口 点击事件</h1>
                 </div>
             </div>
         </div>
@@ -327,22 +327,129 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JavaScript/" class="post-category">
+                                JavaScript
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -351,7 +458,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-01
+                    2021-01-07
                 </div>
                 
 
@@ -360,7 +467,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    63
+                    184
                 </div>
                 
 
@@ -390,7 +497,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>中国及各省地图坐标 json文件 导出<br><a target="_blank" rel="noopener" href="http://datav.aliyun.com/tools/atlas/#&amp;lat=33.50475906922609&amp;lng=104.32617187499999&amp;zoom=4">http://datav.aliyun.com/tools/atlas/#&amp;lat=33.50475906922609&amp;lng=104.32617187499999&amp;zoom=4</a><br>高德地图错误码<br><a target="_blank" rel="noopener" href="https://lbs.amap.com/api/webservice/guide/tools/info/">https://lbs.amap.com/api/webservice/guide/tools/info/</a><br>高德地图部分接口<br><a target="_blank" rel="noopener" href="https://lbs.amap.com/api/webservice/guide/api/georege">https://lbs.amap.com/api/webservice/guide/api/georege</a></p>
+                <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BMapGL<span class="token punctuation">.</span>Map</span><span class="token punctuation">(</span><span class="token string">'container'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">centerAndZoom</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BMapGL<span class="token punctuation">.</span>Point</span><span class="token punctuation">(</span><span class="token number">116.404</span><span class="token punctuation">,</span> <span class="token number">39.928</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">enableScrollWheelZoom</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> pp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> lng<span class="token operator">:</span> <span class="token number">116.404</span><span class="token punctuation">,</span> lat<span class="token operator">:</span> <span class="token number">39.925</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> lng<span class="token operator">:</span> <span class="token number">116.404</span><span class="token punctuation">,</span> lat<span class="token operator">:</span> <span class="token number">39.915</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> lng<span class="token operator">:</span> <span class="token number">116.395</span><span class="token punctuation">,</span> lat<span class="token operator">:</span> <span class="token number">39.935</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> lng<span class="token operator">:</span> <span class="token number">116.415</span><span class="token punctuation">,</span> lat<span class="token operator">:</span> <span class="token number">39.931</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token comment">// 创建点标记</span>
+    <span class="token keyword">var</span> opts <span class="token operator">=</span> <span class="token punctuation">{</span>
+        width<span class="token operator">:</span> <span class="token number">250</span><span class="token punctuation">,</span>     <span class="token comment">// 信息窗口宽度</span>
+        height<span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>     <span class="token comment">// 信息窗口高度</span>
+	    title <span class="token operator">:</span> <span class="token string">"故宫博物院"</span> <span class="token punctuation">,</span> <span class="token comment">// 信息窗口标题</span>
+	    message<span class="token operator">:</span><span class="token string">"这里是故宫"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> a <span class="token operator">&lt;</span> pp<span class="token punctuation">.</span>length<span class="token punctuation">;</span> a<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> <span class="token constant">P</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BMapGL<span class="token punctuation">.</span>Point</span><span class="token punctuation">(</span>pp<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token punctuation">.</span>lng<span class="token punctuation">,</span> pp<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token punctuation">.</span>lat<span class="token punctuation">)</span>
+        <span class="token keyword">var</span> <span class="token constant">MP</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BMapGL<span class="token punctuation">.</span>Marker</span><span class="token punctuation">(</span><span class="token constant">P</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        map<span class="token punctuation">.</span><span class="token function">addOverlay</span><span class="token punctuation">(</span><span class="token constant">MP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> content <span class="token operator">=</span> <span class="token string">"地址：北京市东城区王府井大街"</span> <span class="token operator">+</span> a
+        <span class="token function">addClickHandler</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> <span class="token constant">MP</span><span class="token punctuation">,</span> <span class="token constant">P</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">addClickHandler</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> marker<span class="token punctuation">,</span> p</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        marker<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> infoWindow <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BMapGL<span class="token punctuation">.</span>InfoWindow</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> opts<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 创建信息窗口对象 </span>
+            map<span class="token punctuation">.</span><span class="token function">openInfoWindow</span><span class="token punctuation">(</span>infoWindow<span class="token punctuation">,</span> p<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//开启信息窗口</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://liemeday.github.io/blogPic/20210107150110/1.png" alt="效果图"></p>
 
                 
             </div>
@@ -444,7 +579,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -613,7 +752,7 @@
         repo: 'liemeday.github.io',
         owner: 'lieMeDay',
         admin: "lieMeDay",
-        id: '2019-12-01T18-50-40',
+        id: '2021-01-07T15-01-10',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -639,46 +778,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/28/git-ji-chu/">
+                <a href="/2021/01/07/bdinfo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="git基础使用">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="百度地图给多个点添加信息窗口 点击事件">
                         
-                        <span class="card-title">git基础使用</span>
+                        <span class="card-title">百度地图给多个点添加信息窗口 点击事件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            git基础命令
+                            百度地图给多个点添加信息窗口 点击事件
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/git/" class="post-category">
-                                    git
+                            <a href="/categories/JavaScript/" class="post-category">
+                                    JavaScript
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -689,37 +830,52 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/01/mapfile/">
+                <a href="/2021/01/06/xiao-cheng-xu-tou-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="地图坐标文件">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="小程序canvas头像不显示">
                         
-                        <span class="card-title">地图坐标文件</span>
+                        <span class="card-title">小程序canvas头像不显示</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            地图坐标文件 可导出json坐标文件
+                            小程序正式版 canvas画头像不显示
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-06
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Born to the sun
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                    小程序
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">小程序</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -749,6 +905,100 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
