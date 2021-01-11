@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vue-cli 3 脚手架搭建（create）</title>
+      <link href="2021/01/11/createvue/"/>
+      <url>2021/01/11/createvue/</url>
+      
+        <content type="html"><![CDATA[<p>地址：<a href="https://cli.vuejs.org/zh/guide/">https://cli.vuejs.org/zh/guide/</a><br>1.npm install -g @vue/cli</p><p>2.vue create hello-world // 项目名称</p><p>终端：（上下键选择）</p><ul><li><p>default (bable，eslint） // 默认</p></li><li><p>Manually select features // 手动 **选择手动创建项目回车<br>终端：（上下键移动键，空格键是否选中）<br>? Please pick a preset: Manually select features<br>? Check the features needed for your project:</p></li><li><p>(*) Babel</p></li><li><p>( ) TypeScript // 语法</p></li><li><p>( ) Progressive Web App (PWA) Support // PWA</p></li><li><p>(*) Router // 路由</p></li><li><p>() Vuex // store</p></li><li><p>( ) CSS Pre-processors // 预编译</p></li><li><p>() Linter / Formatter // 格式化代码</p></li><li><p>( ) Unit Testing</p></li><li><p>( ) E2E Testing<br>回车<br>终端：<br>? Please pick a preset: Manually select features // 手动创建项目<br>? Check the features needed for your project: Babel, Router, Vuex, CSS Pre-processors, Linter<br>? Use history mode for router? (Requires proper server setup for index fallback in production) Yes<br>//在生产中需要适当的服务器设置用于索引回退<br>? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS<br>// css 预编译<br>? Pick a linter / formatter config: Prettier // (ESLint + Prettier)格式化程序配置<br>? Pick additional lint features: Lint on save // 保存即检查格式<br>? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? In dedicated config files<br>// 其他配置数据单独存放再一个配置文件内<br>? Save this as a preset for future projects? Yes<br>// 是否保存这个项目的配置<br>? Save preset as: SaveVue3.0<br>// 是的话 项目命名假设为：createVue3.0 下一次可直接选择这个模板创建</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>百度地图给多个点添加信息窗口 点击事件</title>
       <link href="2021/01/07/bdinfo/"/>
       <url>2021/01/07/bdinfo/</url>
@@ -457,31 +482,6 @@
     
     
     <entry>
-      <title>js数组对象排序</title>
-      <link href="2020/11/28/arrsort/"/>
-      <url>2020/11/28/arrsort/</url>
-      
-        <content type="html"><![CDATA[<h3 id="普通排序"><a href="#普通排序" class="headerlink" title="普通排序"></a>普通排序</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">,</span> <span class="token string">"B"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//["A", "B", "a", "b"]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h3><p>利用数组api ——&gt; sort来进行排序</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">"Rom"</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">12</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">"Bob"</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">22</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">"Ma"</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">"Tony"</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">25</span><span class="token punctuation">}</span><span class="token punctuation">]</span> person<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span> <span class="token keyword">return</span> a<span class="token punctuation">.</span>age<span class="token operator">-</span>b<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment">//升序</span> person<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span> <span class="token keyword">return</span> b<span class="token punctuation">.</span>age<span class="token operator">-</span>a<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment">//降序</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>js循环方法 -- for</title>
       <link href="2020/11/28/for/"/>
       <url>2020/11/28/for/</url>
@@ -509,11 +509,11 @@
     
     
     <entry>
-      <title>数组方法</title>
-      <link href="2020/06/30/jsarrb/"/>
-      <url>2020/06/30/jsarrb/</url>
+      <title>js数组对象排序</title>
+      <link href="2020/11/28/arrsort/"/>
+      <url>2020/11/28/arrsort/</url>
       
-        <content type="html"><![CDATA[<h3 id="输入一个数值，返回数组项最接近的一项"><a href="#输入一个数值，返回数组项最接近的一项" class="headerlink" title="输入一个数值，返回数组项最接近的一项"></a>输入一个数值，返回数组项最接近的一项</h3><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">const lookupNear = (array, value) =&gt; {  // 将原数组复制，不会影响原数组  let arr = array.concat([]);  arr.push(value);  // 数据排序  arr.sort((a, b) =&gt; {    return a - b;  });  let index = arr.indexOf(value);  // 当前项在数组第一项 / 最后一项，返回当前项的后一项 / 前一项  if (index === 0) {    // return arr[index + 1];    return index+1  } else if (index === array.length - 1) {    // return arr[index - 1];    return index-1  }  //   console.log(arr)  // 当前项和前一项或者后一项比较，返回差值小的项  //   console.log(arr[index - 1],arr[index],arr[index + 1])  let resultIndex =    arr[index] - arr[index - 1] &gt; arr[index + 1] - arr[index] ?    index + 1 :    index - 1;  //   console.log( arr[resultIndex],resultIndex)  // return arr[resultIndex];  return resultIndex}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h3 id="普通排序"><a href="#普通排序" class="headerlink" title="普通排序"></a>普通排序</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">,</span> <span class="token string">"A"</span><span class="token punctuation">,</span> <span class="token string">"B"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//["A", "B", "a", "b"]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h3><p>利用数组api ——&gt; sort来进行排序</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">"Rom"</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">12</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">"Bob"</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">22</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">"Ma"</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">"Tony"</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token number">25</span><span class="token punctuation">}</span><span class="token punctuation">]</span> person<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span> <span class="token keyword">return</span> a<span class="token punctuation">.</span>age<span class="token operator">-</span>b<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment">//升序</span> person<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span> <span class="token keyword">return</span> b<span class="token punctuation">.</span>age<span class="token operator">-</span>a<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment">//降序</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -539,6 +539,31 @@
       <url>2020/06/30/jsarra/</url>
       
         <content type="html"><![CDATA[<p>js把一个数组内容插入到另一个数组的指定位置</p><pre class="line-numbers language-javaScript" data-language="javaScript"><code class="language-javaScript">let arr1 = ['a', 'b', 'c']; let arr2 = ['1', '2', '3']; // 把arr2 变成一个适合splice的数组（包含splice前2个参数的数组）arr2.unshift(2, 0); // ------------------ 这里的数字控制插入的位置-------------------------console.log(arr2); //[2, 0, "1", "2", "3"]Array.prototype.splice.apply(arr1, arr2); console.log(arr1); //["a", "b", "1", "2", "3", "c"]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数组方法</title>
+      <link href="2020/06/30/jsarrb/"/>
+      <url>2020/06/30/jsarrb/</url>
+      
+        <content type="html"><![CDATA[<h3 id="输入一个数值，返回数组项最接近的一项"><a href="#输入一个数值，返回数组项最接近的一项" class="headerlink" title="输入一个数值，返回数组项最接近的一项"></a>输入一个数值，返回数组项最接近的一项</h3><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">const lookupNear = (array, value) =&gt; {  // 将原数组复制，不会影响原数组  let arr = array.concat([]);  arr.push(value);  // 数据排序  arr.sort((a, b) =&gt; {    return a - b;  });  let index = arr.indexOf(value);  // 当前项在数组第一项 / 最后一项，返回当前项的后一项 / 前一项  if (index === 0) {    // return arr[index + 1];    return index+1  } else if (index === array.length - 1) {    // return arr[index - 1];    return index-1  }  //   console.log(arr)  // 当前项和前一项或者后一项比较，返回差值小的项  //   console.log(arr[index - 1],arr[index],arr[index + 1])  let resultIndex =    arr[index] - arr[index - 1] &gt; arr[index + 1] - arr[index] ?    index + 1 :    index - 1;  //   console.log( arr[resultIndex],resultIndex)  // return arr[resultIndex];  return resultIndex}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
